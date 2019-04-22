@@ -3,4 +3,4 @@
 
 
 ## domain design
-![alternative text](http://www.plantuml.com/plantuml/proxy?src=https://raw.github.com/bryht/DartBoard/master/design.puml)
+![alternative text](http://www.plantuml.com/plantuml/proxy?src=https://raw.github.com/bryht/DartBoard/master/design.puml&radom=1)
