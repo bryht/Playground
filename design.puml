@@ -1,3 +1,20 @@
-@startuml
-Bob -> Alice : hello
+@startuml DartBoard
+class Player {
+    Id : guid
+    Name : string
+    Settings:Dictionary<string,string>
+
+}
+
+class Game {
+    Points:int
+    PlayerIds: guid[]
+    GameMode:GameMode
+    
+}
+
+enum GameMode{
+    SingleOut:0
+    DoubleOut:1
+}
 @enduml
