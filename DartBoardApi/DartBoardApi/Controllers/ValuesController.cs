@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DartBoardApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class ValuesController : ControllerBase
     {
