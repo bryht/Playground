@@ -1,20 +1,46 @@
 @startuml DartBoard
 class Player {
     Id : guid
+    Game: Game
     Name : string
-    Settings:Dictionary<string,string>
-
+    Avatar:string
+    PlayerState: PlayerState
+    PlayerRole: PlayerRole
+    CurrentPoints:int
+    CurrentThrowTimes:int
+    Order:int
+    IsPlaying:bool
+    ==
+    void Confirm()
+    void Join()
+    void Create()
+    void EnterPointsAndNextOne()
+    void CheckWinner()
 }
 
 class Game {
     Points:int
     PlayerIds: guid[]
-    GameMode:GameMode
-    
+    GameFinishMode:GameMode
+    RoomNumber:int
+    ==
+    int GenerateRoomNumber();
+    int GenerateOrder();
+    void RemovePlayer();
+    void AnotherGame();
+    void StartGame();
 }
 
-enum GameMode{
-    SingleOut:0
-    DoubleOut:1
+enum GameFinishMode{
+    SingleOut=0,
+    DoubleOut=1
+}
+enum PlayerState{
+    Waiting=0,
+    Confirmed=1
+}
+enum PlayerRole{
+    Owner=0,
+    Participant=1
 }
 @enduml
