@@ -48,3 +48,4 @@ steps:
     repository: bryht/dartboardapi
     command: 'build'
     Dockerfile: './src/DartBoardApi/Dockerfile'
+    buildContext: 'src'
