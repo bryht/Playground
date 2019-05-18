@@ -42,13 +42,6 @@ steps:
     versioningScheme: 'off'
     arguments: '--configuration $(buildConfiguration) --output $(System.DefaultWorkingDirectory)/src/publish'
 
-# - task: Docker@2
-#   displayName: 'Build Docker'
-#   inputs:
-#     repository: bryht/dartboardapi
-#     command: 'build'
-#     Dockerfile: './src/DartBoardApi/Dockerfile'
-#     buildContext: 'src'
 - task: Docker@2
   displayName: Docker Login
   inputs:
@@ -56,6 +49,7 @@ steps:
     containerRegistry: dockerhub
 
 - task: Docker@2
+  displayName: Docker Build and Push
   inputs:
     repository: 'bryht/dartboardapi'
     command: 'buildAndPush'
