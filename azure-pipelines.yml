@@ -52,7 +52,8 @@ steps:
 - task: Docker@2
   inputs:
     command: 'login'
-    arguments:  -u $(dockerid) -p $(dockerpassword) 
+    containerRegistry: dockerhub
+
 - task: Docker@2
   inputs:
     repository: 'bryht/dartboardapi'
