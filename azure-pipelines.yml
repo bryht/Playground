@@ -50,6 +50,7 @@ steps:
 #     Dockerfile: './src/DartBoardApi/Dockerfile'
 #     buildContext: 'src'
 - task: Docker@2
+  displayName: Docker Login
   inputs:
     command: 'login'
     containerRegistry: dockerhub
