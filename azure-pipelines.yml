@@ -35,9 +35,10 @@ steps:
   displayName: 'Publish'
   inputs:
     command: 'publish'
-    publishWebProjects: true
+    publishWebProjects: false
     zipAfterPublish: false
     feedsToUse: 'select'
+    projects: './src/DartBoardApi/DartBoardApi.csproj'
     versioningScheme: 'off'
     arguments: '--configuration $(buildConfiguration) --output $(System.DefaultWorkingDirectory)/src/publish'
 
