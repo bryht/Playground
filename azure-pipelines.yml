@@ -7,7 +7,6 @@ trigger:
   branches:
     include:
     - master
-    - dev/*
 
 pool:
   vmImage: 'ubuntu-latest'
@@ -26,14 +25,14 @@ steps:
     arguments: '--configuration $(buildConfiguration)'
 
 - task: DotNetCoreCLI@2
-  displayName: 'Test solution'
+  displayName: 'Test'
   inputs:
     command: 'test'
-    projects: './DartBoardApi/**/*.Test.csproj'
+    projects: './**/**/*.Test.csproj'
     arguments: '--configuration $(buildConfiguration)'
 
-- task: DockerCompose@0
+- task: Docker@2
+  displayName: 'Build Docker'
   inputs:
-    containerregistrytype: 'Container Registry'
-    dockerComposeFile: '**/docker-compose.yml'
-    action: 'Build services'
+    command: 'build'
+    Dockerfile: './**/**/Dockerfile'
