@@ -17,7 +17,7 @@ variables:
 
 steps:
 - task: DotNetCoreCLI@2
-  displayName: Build1
+  displayName: Build2
   inputs:
     command: 'build'
     projects: './DartBoardApi/DartBoardApi.sln'
