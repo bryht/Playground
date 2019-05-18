@@ -17,7 +17,7 @@ variables:
 
 steps:
 - task: DotNetCoreCLI@2
-  displayName: Build3
+  displayName: Build
   inputs:
     command: 'build'
     projects: './DartBoardApi/DartBoardApi.sln'
@@ -31,3 +31,9 @@ steps:
     command: 'test'
     projects: './DartBoardApi/**/*.Test.csproj'
     arguments: '--configuration $(buildConfiguration)'
+
+- task: DockerCompose@0
+  inputs:
+    containerregistrytype: 'Container Registry'
+    dockerComposeFile: '**/docker-compose.yml'
+    action: 'Build services'
