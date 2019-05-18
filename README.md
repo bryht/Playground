@@ -1,4 +1,6 @@
 # DartBoard
+[![Build Status](https://dev.azure.com/bryht/DartBoard/_apis/build/status/bryht.DartBoard?branchName=master)](https://dev.azure.com/bryht/DartBoard/_build/latest?definitionId=3&branchName=master)
+
 Just for fun...
 ## pototype
 
