@@ -35,4 +35,4 @@ steps:
   displayName: 'Build Docker'
   inputs:
     command: 'build'
-    Dockerfile: './DartBoardApi/DartBoardApi/Dockerfile'
+    Dockerfile: './src/DartBoardApi/Dockerfile'
