@@ -14,15 +14,16 @@ variables:
 
 steps:
 - task: DotNetCoreCLI@2
+  displayName: Build
   inputs:
     command: 'build'
-    projects: 'DartBoardApi\DartBoardApi'
+    projects: './DartBoardApi/DartBoardApi.sln'
     feedsToUse: 'select'
     versioningScheme: 'off'
 
 - task: DotNetCoreCLI@2
   inputs:
     command: 'test'
-    projects: 'DartBoardApi\DartBoardApi'
+    projects: './DartBoardApi/DartBoardApi.sln'
     feedsToUse: 'select'
     versioningScheme: 'off'
