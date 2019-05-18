@@ -19,7 +19,7 @@ steps:
   displayName: Build
   inputs:
     command: 'build'
-    projects: './DartBoardApi/DartBoardApi.sln'
+    projects: './src/DartBoardApi.sln'
     feedsToUse: 'select'
     versioningScheme: 'off'
     arguments: '--configuration $(buildConfiguration)'
@@ -28,7 +28,7 @@ steps:
   displayName: 'Test'
   inputs:
     command: 'test'
-    projects: './**/**/*.Test.csproj'
+    projects: './src/**/*.Test.csproj'
     arguments: '--configuration $(buildConfiguration)'
 
 - task: Docker@2
