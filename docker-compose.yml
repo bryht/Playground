@@ -1,0 +1,18 @@
+version: '3.4'
+
+services:
+  atlasapigateway:
+    image: bryht/dartboardapi:dev
+    ports:
+     - "8080:80"
+    networks:
+     - private-network
+  mongo:
+    image: mongo:4.1.6
+    networks:
+     - private-network
+
+networks:
+  private-network:
+    driver: bridge
+    attachable: true
