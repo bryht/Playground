@@ -20,7 +20,7 @@ steps:
   displayName: 'Test'
   inputs:
     command: 'test'
-    projects: './dartboard-api/**/*.Test.csproj'
+    projects: './dartboard-api/*/*.*.Test.csproj'
     arguments: '--configuration $(buildConfiguration)'
 
 - task: Docker@2
