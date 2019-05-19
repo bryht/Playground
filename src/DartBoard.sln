@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DartBoard.Application", "Da
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DartBoard.Persistence", "DartBoard.Persistence\DartBoard.Persistence.csproj", "{B8CB620D-E59F-4BC8-A501-72F113B18929}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{7000D021-59A0-4DD7-AB3C-4EC11DEC6AA4}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{7000D021-59A0-4DD7-AB3C-4EC11DEC6AA4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DartBoard.Application.Test", "DartBoard.Application.Test\DartBoard.Application.Test.csproj", "{32654C7D-6B75-4F42-9918-248BC7649C60}"
 EndProject
