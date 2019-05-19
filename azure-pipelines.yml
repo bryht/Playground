@@ -55,4 +55,4 @@ steps:
     command: 'buildAndPush'
     Dockerfile: './src/DartBoardApi/Dockerfile'
     buildContext: 'src'
-    tags: 'api'
+    tags: 'dev'
