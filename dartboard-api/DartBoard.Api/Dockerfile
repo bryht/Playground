@@ -8,7 +8,7 @@ WORKDIR /src
 COPY ["DartBoard.Api/DartBoard.Api.csproj", "DartBoard.Api/"]
 RUN dotnet restore "DartBoard.Api/DartBoard.Api.csproj"
 COPY . .
-WORKDIR "/src/DartBoard.Api"
+WORKDIR "/dartboard-api/DartBoard.Api"
 RUN dotnet build "DartBoard.Api.csproj" -c Release -o /app
 
 FROM build AS publish

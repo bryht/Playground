@@ -15,20 +15,12 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-# - task: DotNetCoreCLI@2
-#   displayName: Build
-#   inputs:
-#     command: 'build'
-#     projects: './src/DartBoard.sln'
-#     feedsToUse: 'select'
-#     versioningScheme: 'off'
-#     arguments: '--configuration $(buildConfiguration)'
 
 - task: DotNetCoreCLI@2
   displayName: 'Test'
   inputs:
     command: 'test'
-    projects: './src/**/*.Test.csproj'
+    projects: './dartboard-api/**/*.Test.csproj'
     arguments: '--configuration $(buildConfiguration)'
 
 - task: Docker@2
@@ -42,6 +34,6 @@ steps:
   inputs:
     repository: 'bryht/dartboardapi'
     command: 'buildAndPush'
-    Dockerfile: './src/DartBoard.Api/Dockerfile'
+    Dockerfile: './dartboard-api/DartBoard.Api/Dockerfile'
     buildContext: 'src'
     tags: 'dev'
