@@ -14,7 +14,7 @@ namespace DartBoard.Api.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            return new string[] { "value9" };
+            return new string[] { "value10" };
         }
 
         // GET api/values/5
