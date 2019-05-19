@@ -4,7 +4,7 @@ EXPOSE 80
 EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/core/sdk:2.2-stretch AS build
-WORKDIR /src
+WORKDIR /dartboard-api
 COPY ["DartBoard.Api/DartBoard.Api.csproj", "DartBoard.Api/"]
 RUN dotnet restore "DartBoard.Api/DartBoard.Api.csproj"
 COPY . .
