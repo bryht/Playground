@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace DartBoardApi.Controllers
+namespace DartBoard.Api.Controllers
 {
     [Route("[controller]")]
     [ApiController]
@@ -14,7 +14,7 @@ namespace DartBoardApi.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            return new string[] { "value7" };
+            return new string[] { "value8" };
         }
 
         // GET api/values/5
