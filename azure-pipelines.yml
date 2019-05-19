@@ -35,5 +35,5 @@ steps:
     repository: 'bryht/dartboardapi'
     command: 'buildAndPush'
     Dockerfile: './dartboard-api/DartBoard.Api/Dockerfile'
-    buildContext: 'src'
+    buildContext: 'dartboard-api'
     tags: 'dev'
