@@ -8,8 +8,9 @@ namespace DartBoard.Domain.Entities
     {
         public Guid Id { get; set; }
         public string RoomNumber { get; set; }
-        public List<Guid> PlayerIds { get; set; }
         public int Points { get; set; }
         public GameFinishMode GameMode { get; set; }
+        public List<GamePlayer> GamePlayers { get; set; }
+           
     }
 }

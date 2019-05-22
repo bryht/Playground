@@ -1,11 +1,13 @@
 ﻿using System.Reflection;
 using DartBoard.Api.Filter;
 using DartBoard.Application.Infrastructure;
+using DartBoard.Persistence;
 using FluentValidation.AspNetCore;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -24,20 +26,22 @@ namespace DartBoard.Api
         public void ConfigureServices(IServiceCollection services)
         {
             // Add MediatR
-
             services.AddMediatR(typeof(RequestValidationBehavior<,>).GetTypeInfo().Assembly);
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(RequestValidationBehavior<,>));
 
-            // Add DbContext using SQL Server Provider
-            //services.AddDbContext<INorthwindDbContext, NorthwindDbContext>(options =>
-            //    options.UseSqlServer(Configuration.GetConnectionString("NorthwindDatabase")));
+            // Add DbContext
+            services.AddDbContext<DataBaseContext>(options =>
+            {
+                options.UseSqlite("Data Source=dartboard.db");
+            });
+
+            // Add document
             services.AddOpenApiDocument(document =>
             {
                 document.Title = "api";
             });
 
-            services
-                .AddMvc(options => options.Filters.Add(typeof(CustomExceptionFilterAttribute)))
+            services.AddMvc(options => options.Filters.Add(typeof(CustomExceptionFilterAttribute)))
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
                 .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining(typeof(RequestValidationBehavior<,>)));
 
@@ -47,12 +51,16 @@ namespace DartBoard.Api
                 options.SuppressModelStateInvalidFilter = true;
             });
 
+            services.AddTransient<DbInitializer>();
+
 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, DbInitializer dbInitializer)
         {
+            dbInitializer.Initial();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -76,6 +84,7 @@ namespace DartBoard.Api
                     name: "default",
                     template: "{controller}/{action=Index}/{id?}");
             });
+
         }
     }
 }

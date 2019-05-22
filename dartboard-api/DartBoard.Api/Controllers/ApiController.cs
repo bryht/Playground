@@ -2,32 +2,47 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DartBoard.Application.Commands;
+using DartBoard.Application.Queries;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DartBoard.Api.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    public class ValuesController : ControllerBase
+    public class ApiController : ControllerBase
     {
-        // GET api/values
+        private readonly IMediator mediator;
+
+        public ApiController(IMediator mediator)
+        {
+            this.mediator = mediator;
+        }
+
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            return new string[] { "value10" };
+            return new string[] { "api-version-11" };
         }
 
-        // GET api/values/5
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id)
         {
             return "value";
         }
-
-        // POST api/values
-        [HttpPost]
-        public void Post([FromBody] string value)
+        [HttpGet("game/{id}")]
+        public async Task<IActionResult> Game(Guid id)
         {
+            return Ok(await mediator.Send(new GetGameByIdQuery()
+            {
+                Id = id
+            }));
+        }
+        [HttpPost("game")]
+        public async Task Game(CreateGameCommand value)
+        {
+            Created("", await mediator.Send(value));
         }
 
         // PUT api/values/5

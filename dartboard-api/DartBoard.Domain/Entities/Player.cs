@@ -1,5 +1,6 @@
 ﻿using DartBoard.Domain.Enums;
 using System;
+using System.Collections.Generic;
 
 namespace DartBoard.Domain.Entities
 {
@@ -14,6 +15,8 @@ namespace DartBoard.Domain.Entities
         public int CurrentThrowTimes { get; set; }
         public int Order { get; set; }
         public bool IsPlaying { get; set; }
+        public List<GamePlayer> GamePlayers { get; set; }
+
 
     }
 }
