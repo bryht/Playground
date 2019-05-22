@@ -5,6 +5,8 @@ services:
     image: bryht/dartboardapi:dev
     ports:
      - "8080:80"
+    volumes: 
+     -"dartboard.db:/data/dartboard.db"
     networks:
      - private-network
   dartboardweb:
