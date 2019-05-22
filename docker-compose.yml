@@ -6,7 +6,7 @@ services:
     ports:
      - "8080:80"
     volumes: 
-     -"dartboard.db:/data/dartboard.db"
+     -"./dartboard.db:/data/dartboard.db"
     networks:
      - private-network
   dartboardweb:
