@@ -18,7 +18,7 @@ function Welcome() {
         <input type="text" name="code" id="code" />
       </div>
       <div>
-        <button type="submit">Go</button>
+        <button type="submit">Goooo</button>
       </div>
     </div>
   );
