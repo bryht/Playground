@@ -26,10 +26,10 @@ namespace DartBoard.Api.Controllers
             return new string[] { "api-version-12" };
         }
 
-        [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        [HttpGet("game")]
+        public async Task<IActionResult> GetGames()
         {
-            return "value";
+            return Ok(await mediator.Send(new GetGamesQuery()));
         }
         [HttpGet("game/{id}")]
         public async Task<IActionResult> Game(Guid id)
