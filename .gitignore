@@ -332,3 +332,4 @@ ASALocalRun/
 /src/.vscode
 .vscode/launch.json
 .vscode/tasks.json
+data/dartboard.db
