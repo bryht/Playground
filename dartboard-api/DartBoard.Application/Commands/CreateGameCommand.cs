@@ -3,9 +3,8 @@ using System;
 
 namespace DartBoard.Application.Commands
 {
-    public class CreateGameCommand : IRequest<Unit>
+    public class CreateGameCommand : IRequest<Guid>
     {
-        public Guid Id { get; set; }
         public string RoomNumber { get; set; }
     }
 }

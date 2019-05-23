@@ -7,7 +7,6 @@ namespace DartBoard.Application.Commands
     {
         public CreateGameCommandValidator()
         {
-            RuleFor(a => a.Id).NotEmpty();
         }
     }
 }

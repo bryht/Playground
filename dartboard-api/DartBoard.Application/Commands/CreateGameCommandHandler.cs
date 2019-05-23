@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DartBoard.Application.Commands
 {
-    public class CreateGameCommandHandler : IRequestHandler<CreateGameCommand, Unit>
+    public class CreateGameCommandHandler : IRequestHandler<CreateGameCommand, Guid>
     {
         private readonly DataBaseContext dataBaseContext;
 
@@ -16,7 +16,7 @@ namespace DartBoard.Application.Commands
             this.dataBaseContext = dataBaseContext;
         }
 
-        public Task<Unit> Handle(CreateGameCommand request, CancellationToken cancellationToken)
+        public async Task<Guid> Handle(CreateGameCommand request, CancellationToken cancellationToken)
         {
             var game = new Game()
             {
@@ -25,8 +25,8 @@ namespace DartBoard.Application.Commands
             };
 
             dataBaseContext.Add(game);
-            dataBaseContext.SaveChanges();
-            return Unit.Task;
+            await dataBaseContext.SaveChangesAsync();
+            return game.Id;
         }
     }
 }
