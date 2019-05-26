@@ -1,10 +1,10 @@
 import React from 'react';
 import logo from '../logo.svg';
-import './Welcome.css';
+import './Welcome.scss';
 
 function Welcome() {
   return (
-    <div className="body">
+    <div class="body">
       <header>
         <img src={logo} className="logo" alt="logo" />
         <p>
@@ -12,13 +12,14 @@ function Welcome() {
         </p>
       </header>
       <div>
-        <label htmlFor="room">Your Name</label>
-        <input type="text" name="name" id="name" />
-        <label htmlFor="room">Your Code</label>
-        <input type="text" name="code" id="code" />
+        <div class="mdc-text-field">
+          <input type="text"  class="mdc-text-field__input" />
+          <label class="mdc-floating-label">Your Name</label>
+          <div class="mdc-line-ripple"></div>
+        </div>
       </div>
       <div>
-        <button type="submit">Goooo</button>
+        <button type="submit" class="mdc-button mdc-button--raised">Go go go</button>
       </div>
     </div>
   );
