@@ -19,7 +19,7 @@ function Welcome() {
         </div>
       </div>
       <div>
-        <button type="submit" class="mdc-button mdc-button--raised">Go go go</button>
+        <button type="submit" class="mdc-button mdc-button--raised"> Go go go</button>
       </div>
     </div>
   );
