@@ -1,6 +1,6 @@
 @import "./theme.scss";
-@import "~@material/button/mdc-button";
-@import "~@material/textfield/mdc-text-field";
+@import "../node_modules/@material/button/mdc-button";
+@import "../node_modules/@material/textfield/mdc-text-field";
 
 body {
   margin: 0;
