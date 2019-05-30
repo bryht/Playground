@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-import Welcome from './Welcome/Welcome';
 import * as serviceWorker from './serviceWorker';
 import { MDCRipple} from '@material/ripple';
 import { MDCTextField} from '@material/textfield';
+import App from './App/App';
 
-ReactDOM.render(<Welcome />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
  
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

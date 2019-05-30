@@ -1,28 +1,24 @@
 import React from 'react';
-import logo from '../logo.svg';
 import './Welcome.scss';
+import WelcomeBody from '../WelcomeBody/WelcomeBody';
 
-function Welcome() {
-  return (
-    <div class="body">
-      <header>
-        <img src={logo} className="logo" alt="logo" />
-        <p>
-          Dart Board
-        </p>
-      </header>
-      <div>
+import { Component } from 'react'
+
+export class Welcome extends Component {
+
+  render() {
+    return (
+      <WelcomeBody footer={
+        <a type="submit" href="/choose" class="mdc-button mdc-button--raised"> Go go go</a>
+      }>
         <div class="mdc-text-field">
-          <input type="text"  class="mdc-text-field__input" />
+          <input type="text" class="mdc-text-field__input" />
           <label class="mdc-floating-label">Your Name</label>
           <div class="mdc-line-ripple"></div>
         </div>
-      </div>
-      <div>
-        <button type="submit" class="mdc-button mdc-button--raised"> Go go go</button>
-      </div>
-    </div>
-  );
+      </WelcomeBody>
+    )
+  }
 }
 
-export default Welcome;
+export default Welcome
