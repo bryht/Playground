@@ -7,8 +7,8 @@ export default class WelcomeChoose extends Component {
                 <h2>
                     Welcome 111
                </h2>
-                <button>Create A Game</button>
-                <button>Join A Game</button>
+                <button class="mdc-button mdc-button--raised">Create A Game</button>
+                <button class="mdc-button mdc-button--raised">Join A Game</button>
             </div>
         )
     }

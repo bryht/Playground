@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
-
+import './WelcomeName.scss';
 export class WelcomeName extends Component {
 
     render() {
         return (
             <div>
-
                 <div>
                     <div class="mdc-text-field">
                         <input type="text" class="mdc-text-field__input" />
