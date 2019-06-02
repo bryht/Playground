@@ -6,4 +6,15 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: 0;
+  background-color: rgba(92, 109, 109, 0.836);
+}
+
+button {
+  @extend .mdc-button;
+  @extend .mdc-button--raised;
+}
+
+a.button{
+  @extend .mdc-button;
+  @extend .mdc-button--raised;
 }

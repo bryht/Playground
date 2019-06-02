@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import './WelcomeName.scss';
 export class WelcomeName extends Component {
 
     render() {
@@ -13,7 +12,7 @@ export class WelcomeName extends Component {
                     </div>
                 </div>
                 <div>
-                    <button type="submit" onClick={this.props.onClick} class="mdc-button mdc-button--raised"> Go go go</button>
+                    <button type="submit" onClick={this.props.onClick}> Go go go</button>
                 </div>
             </div>
         )

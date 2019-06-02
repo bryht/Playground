@@ -1,9 +1,9 @@
 import React from 'react';
-import './Welcome.scss';
+import style from './Welcome.module.scss';
 import logo from '../logo.svg';
 import { Component } from 'react'
-import WelcomeChoose from '../WelcomeChoose/WelcomeChoose';
-import WelcomeName from '../WelcomeName/WelcomeName';
+import WelcomeChoose from './WelcomeChoose';
+import WelcomeName from './WelcomeName';
 
 export class Welcome extends Component {
 
@@ -23,7 +23,7 @@ export class Welcome extends Component {
 
   render() {
     return (
-      <div class="body">
+      <div className={style.body}>
         <header>
           <img src={logo} alt="logo" />
           <p>Dart Board</p>
@@ -32,8 +32,6 @@ export class Welcome extends Component {
           <WelcomeChoose></WelcomeChoose> :
           <WelcomeName onClick={this.goChoose}></WelcomeName>
         }
-
-
       </div>
     )
   }
