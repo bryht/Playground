@@ -9,10 +9,14 @@ export class CreateGame extends Component {
                     <ul>
                         <li>
                             <div>
-                                <order></order>
+                                <i class="material-icons">face</i>
+
+                                <order>1</order>
                                 <label>Ming</label>
-                                <state></state>
-                                <control></control>
+                                <state>Waiting</state>
+                                <control>
+                                    cancel
+                                </control>
                             </div>
                         </li>
                         <li>111</li>
