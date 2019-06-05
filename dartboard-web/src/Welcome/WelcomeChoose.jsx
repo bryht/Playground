@@ -5,7 +5,7 @@ export default class WelcomeChoose extends Component {
         return (
             <div>
                 <h2>
-                    Welcome 111
+                    Welcome 222
                </h2>
                 <a class='button' href='./create'>Create A Game</a>
                 <button>Join A Game</button>
