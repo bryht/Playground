@@ -28,5 +28,6 @@ textFieldEls.forEach((el) => {
   }
 });
 
-const slider = new MDCSlider(document.querySelector('.mdc-slider'));
-slider.listen('MDCSlider:change', () => console.log(`Value changed to ${slider.value}`));
+//Sliders
+const sliderEls=Array.from(document.querySelectorAll('.mdc-slider'));
+sliderEls.forEach((el)=>new MDCSlider(el));
