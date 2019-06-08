@@ -4,10 +4,12 @@ import './index.scss';
 import * as serviceWorker from './serviceWorker';
 import { MDCRipple} from '@material/ripple';
 import { MDCTextField} from '@material/textfield';
+import {MDCSlider} from '@material/slider';
+
 import App from './App/App';
 
 ReactDOM.render(<App />, document.getElementById('root'));
- 
+
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
@@ -25,3 +27,6 @@ textFieldEls.forEach((el) => {
     textField.value = 'Input text';
   }
 });
+
+const slider = new MDCSlider(document.querySelector('.mdc-slider'));
+slider.listen('MDCSlider:change', () => console.log(`Value changed to ${slider.value}`));

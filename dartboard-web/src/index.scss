@@ -1,10 +1,14 @@
-@import "./theme.scss";
-@import "@material/button/mdc-button";
-@import "@material/textfield/mdc-text-field";
-body {
+*{
   margin: 0;
   padding: 0;
   box-sizing: 0;
+}
+@import "./theme.scss";
+@import "@material/button/mdc-button";
+@import "@material/textfield/mdc-text-field";
+@import "@material/slider/mdc-slider";
+
+body{
   background-color: #5c6d6d;
 }
 
