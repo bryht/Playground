@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "@material/button": "^2.1.1",
+    "@material/form-field": "^2.3.0",
+    "@material/radio": "^2.3.0",
     "@material/ripple": "^2.1.1",
     "@material/slider": "^2.3.0",
     "@material/textfield": "^2.1.1",
