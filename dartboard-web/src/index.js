@@ -28,6 +28,6 @@ textFieldEls.forEach((el) => {
   }
 });
 
-//Sliders
+// Sliders
 const sliderEls=Array.from(document.querySelectorAll('.mdc-slider'));
 sliderEls.forEach((el)=>new MDCSlider(el));
