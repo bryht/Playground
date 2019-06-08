@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import styles from './CreateGame.module.scss';
+
 export class CreateGame extends Component {
     render() {
         return (
@@ -9,21 +10,27 @@ export class CreateGame extends Component {
                     <ul>
                         <li>
                             <div>
-                                <i class="material-icons">face</i>
-
-                                <order>1</order>
+                                <order class="material-icons">swap_vertical_circle</order>
+                                <avator class="material-icons">account_circle</avator>
                                 <label>Ming</label>
-                                <state>Waiting</state>
-                                <control>
-                                    cancel
-                                </control>
+                                <state class="material-icons">check_circle_outline</state>
+                                <control  class="material-icons">highlight_off </control>
                             </div>
                         </li>
-                        <li>111</li>
+                        <li>
+                            <div>
+                                <order class="material-icons">swap_vertical_circle</order>
+                                <avator class="material-icons">account_circle</avator>
+                                <label>Ming</label>
+                                <state  class="material-icons">schedule</state>
+                                <control  class="material-icons"> highlight_off</control>
+                            </div>
+                        </li>
+                         
                     </ul>
                 </div>
                 <div className={styles.control}>
-                    <button> abc   </button>
+                    <button> Start   </button>
                 </div>
             </div>
         )

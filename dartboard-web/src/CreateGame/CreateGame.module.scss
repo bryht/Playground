@@ -3,33 +3,56 @@
     display: grid;
     grid-template-rows: 70px auto 200px;
     height: 100vh;
+
     h2 {
         grid-row: 1/2;
         align-items: flex-start;
     }
+
     .content {
         grid-row: 2/3;
         justify-self: self-start;
         align-self: flex-start;
         display: flex;
         flex-direction: column;
-        ul{
+
+        ul {
             list-style-type: none;
-             li{
+
+            li {
                 width: 80vw;
+                margin: 15px 0;
+
                 div {
                     display: flex;
-                    background-color: red;
-                    order{
-                        display: block;
-                        width: 20px;
-                        background-color: yellow;
+                    margin-left: 50px;
+                    height: 50px;
+                    background-color: #e7eef5e7;
+                    align-items: center;
+                    border-radius: 25px;
+
+                    order {
+                        font-size: 50px;
+                        color: #423838e7;
+                        margin-left: -50px;
+                    }
+                    avator {
+                        font-size: 50px;
+                        color: #1a4a7ae7;
+                    }
+                    state {
+                        font-size: 50px;
+                        margin-left: auto;
+                    }
+                    control {
+                        font-size: 50px;
+                        color: #a00a0a;
                     }
                 }
             }
         }
     }
-    
+
 
     .control {
         grid-row: 3/4;
