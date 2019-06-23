@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import * as serviceWorker from './serviceWorker';
 import { MDCRipple } from '@material/ripple';
-import { MDCTextField } from '@material/textfield';
+import { MDCTextField } from '@material/textfield/component';
 import { MDCSlider } from '@material/slider';
 import { MDCRadio } from '@material/radio';
 
@@ -36,6 +36,7 @@ sliderEls.forEach((el) => new MDCSlider(el));
 // Radios
 const radioFieldEls = Array.from(document.querySelectorAll('.mdc-form-field'));
 radioFieldEls.forEach((el) => {
-  let radio = new MDCRadio(el.querySelector('.mdc-radio'));
-  el.input = radio;
+  
+  // let radio = new MDCRadio(el.getElementsByClassName('.mdc-radio')[0]);
+
 })

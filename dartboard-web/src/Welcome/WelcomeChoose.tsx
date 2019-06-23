@@ -7,7 +7,7 @@ export default class WelcomeChoose extends Component {
                 <h2>
                     Welcome 222
                </h2>
-                <a class='button' href='./create'>Create A Game</a>
+                <a className='button' href='./create'>Create A Game</a>
                 <button>Join A Game</button>
             </div>
         )

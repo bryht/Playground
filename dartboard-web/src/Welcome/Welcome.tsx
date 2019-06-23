@@ -1,13 +1,17 @@
 import React from 'react';
 import style from './Welcome.module.scss';
 import logo from '../logo.svg';
+
 import { Component } from 'react'
 import WelcomeChoose from './WelcomeChoose';
 import WelcomeName from './WelcomeName';
 
-export class Welcome extends Component {
+interface WelcomeState {
+  page: string;
+}
+export class Welcome extends Component<{},WelcomeState> {
 
-  constructor(props) {
+  constructor(props: any) {
     super(props)
     this.state = {
       page: "welcome"
