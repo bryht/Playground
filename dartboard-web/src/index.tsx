@@ -6,8 +6,7 @@ import { MDCRipple } from '@material/ripple';
 import { MDCTextField } from '@material/textfield/component';
 import { MDCSlider } from '@material/slider';
 import { MDCRadio } from '@material/radio';
-
-import App from './App/App';
+import { App } from "./App";
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
@@ -36,7 +35,5 @@ sliderEls.forEach((el) => new MDCSlider(el));
 // Radios
 const radioFieldEls = Array.from(document.querySelectorAll('.mdc-form-field'));
 radioFieldEls.forEach((el) => {
-  
-  // let radio = new MDCRadio(el.getElementsByClassName('.mdc-radio')[0]);
-
+  new MDCRadio(el.getElementsByClassName('mdc-radio')[0]);
 })

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import styles from './CreateGame.module.scss';
-import RadioButton from '../Components/RadioButton/RadioButton';
-import Slider from '../Components/Slider/Slider';
-import PlayerList from '../Components/PlayerList/PlayerList';
+import RadioButton from '../RadioButton/RadioButton';
+import Slider from '../Slider/Slider';
+import PlayerList from '../PlayerList/PlayerList';
 export class CreateGame extends Component {
 
     onDragEnd = () => {

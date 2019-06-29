@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './Welcome.module.scss';
-import logo from '../logo.svg';
+import logo from '../../logo.svg';
 
 import { Component } from 'react'
 import WelcomeChoose from './WelcomeChoose';
