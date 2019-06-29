@@ -1,0 +1,31 @@
+.playinglist {
+    ul {
+        list-style-type: none;
+
+        li {
+            margin: 10px 0;
+            div {
+                display: flex;
+                height: 50px;
+                align-items: center;
+                border-radius: 2px;
+                border-width: 3px;
+                border-style: dashed;
+                color: #1a4a7ae7;
+
+                .avatar {
+                    font-size: 50px;
+                }
+
+                .flag {
+                    font-size: 50px;
+                    margin-left: auto;
+
+                }
+
+
+
+            }
+        }
+    }
+}

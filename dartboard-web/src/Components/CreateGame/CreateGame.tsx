@@ -32,7 +32,7 @@ export class CreateGame extends Component {
                     </section>
                 </div>
                 <div className={styles.control}>
-                    <button>Start</button>
+                    <a className='button' href='./playing'>Start</a>
                 </div>
             </div>
         )
