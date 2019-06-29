@@ -10,7 +10,23 @@ export class Playing extends Component {
                 <div className={styles.content}>
                     <PlayingList>
                         {
-                            [{ Name: 'abc' }, { Name: 'bcd' }]
+                            [{
+                                Name: 'abc',
+                                Avatar: 'abc',
+                                Average: 12,
+                                Score: 40,
+                                Left: 12,
+                                Total: 301,
+                                IsPlaying: true
+                            }, {
+                                Name: 'bcd',
+                                Avatar: 'bcd',
+                                Average: 12,
+                                Score: 40,
+                                Left: 12,
+                                Total: 301,
+                                IsPlaying: false
+                            }]
                         }
                     </PlayingList>
                 </div>

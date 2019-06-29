@@ -17,7 +17,7 @@ export class PlayerList extends Component<{ players: Array<PlayerItem> }> {
                     {
                         (provided) => {
 
-                            return <ul  {...provided.droppableProps}
+                            return <ul className={styles.player_list}  {...provided.droppableProps}
                                 ref={provided.innerRef}>
                                 {
                                     this.props.players.map(item => {
