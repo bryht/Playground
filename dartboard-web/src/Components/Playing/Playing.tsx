@@ -31,7 +31,38 @@ export class Playing extends Component {
                     </PlayingList>
                 </div>
                 <div className={styles.control}>
-                    <a className='button' href='./playing'>Start</a>
+                    <div>
+                        <button>Double</button>
+                        <button>Triple</button>
+                    </div>
+                    <div>
+
+                        <div><button>1</button></div>
+                        <div><button>2</button></div>
+                        <div><button>3</button></div>
+                        <div><button>4</button></div>
+                        <div><button>5</button></div>
+                        <div><button>6</button></div>
+                        <div><button>7</button></div>
+                        <div><button>8</button></div>
+                        <div><button>9</button></div>
+                        <div><button>10</button></div>
+                        <div><button>11</button></div>
+                        <div><button>12</button></div>
+                        <div><button>13</button></div>
+                        <div><button>14</button></div>
+                        <div><button>15</button></div>
+                        <div><button>16</button></div>
+                        <div><button>17</button></div>
+                        <div><button>18</button></div>
+                        <div><button>19</button></div>
+                        <div><button>20</button></div>
+                        <div><button>Bull</button></div>
+                    </div>
+                    <div>
+                        <div><button>Miss</button></div>
+                        <div><button>Undo</button></div>
+                    </div>
                 </div>
             </div>
         )
