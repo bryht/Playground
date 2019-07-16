@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import styles from "./Playing.module.scss";
 import PlayingList from "./PlayingList";
-
+import  axios from "axios";
 export class Playing extends Component {
-    render() {
+    async render() {
+
         return (
             <div className={styles.body}>
                 <h2>Room number:123</h2>
