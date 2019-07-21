@@ -1,0 +1,25 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+@import "./theme.scss";
+@import "@material/button/mdc-button";
+@import "@material/textfield/mdc-text-field";
+@import "@material/slider/mdc-slider";
+@import "@material/form-field/mdc-form-field";
+@import "@material/radio/mdc-radio";
+
+body{
+  background-color: #f1894c;
+}
+
+button {
+  @extend .mdc-button;
+  @extend .mdc-button--raised;
+}
+
+a.button{
+  @extend .mdc-button;
+  @extend .mdc-button--raised;
+}

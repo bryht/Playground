@@ -1,0 +1,62 @@
+.playing_list {
+    ul {
+        list-style-type: none;
+
+        li {
+            margin: 10px 0;
+
+            div {
+                display: flex;
+                height: 80px;
+                background: #d9e8f7;
+                align-items: center;
+                border-radius: 1px;
+                border-style: solid;
+                color: #1a4a7ae7;
+                padding: 5px;
+                .avatar {
+                    font-size: 50px;
+                }
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    border-width: 0px;
+
+                    .name {
+                        align-items: center;
+                        font-size:36px;
+                    }
+
+                    div {
+                        display: flex;
+                        flex-direction: row;
+
+                        span.average {
+                            font-size: 28px;
+                        }
+
+                        i.total {
+                            margin-left: 15px;
+                        }
+
+                        span.total {
+                            font-size: 28px;
+                        }
+                    }
+                }
+
+                .left {
+                    margin-left: 20px;
+                    font-size: 40px;
+                }
+
+                .flag {
+                    font-size: 50px;
+                    margin-left: auto;
+                }
+
+            }
+        }
+    }
+}
