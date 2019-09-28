@@ -335,3 +335,4 @@ ASALocalRun/
 data/dartboard.db
 dartboard-api/.vscode/tasks.json
 dartboard-api/.vscode/launch.json
+dartboard-api/DartBoard.Api/dartboard.db
