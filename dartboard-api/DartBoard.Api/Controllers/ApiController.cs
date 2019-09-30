@@ -23,7 +23,7 @@ namespace DartBoard.Api.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            return new string[] { "api-version-13" };
+            return new string[] { "api-version-15" };
         }
 
         [HttpGet("game")]
